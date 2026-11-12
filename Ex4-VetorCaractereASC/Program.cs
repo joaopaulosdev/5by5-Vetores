@@ -1,36 +1,46 @@
 ﻿Console.WriteLine("-- EXIBIÇÃO CARACTERE E VALOR ASCII --");
-void imprimirVetor(string[] vetor1)
+void ImprimirVetor(string[] vetor1)
 {
     for (int i = 0; i < vetor1.Length; i++)
     {
         Console.Write($"[{vetor1[i]}] ");
     }
 }
+void PreencherVetor(string[] vetor)
+{
+    for (int i = 0; i < vetor.Length; i++)
+    {
+        Console.Write($"Posição: {i + 1}, caractere a inserir: ");
+        vetor[i] = Console.ReadLine()!;
+    }
+}
+void CriarVetorASCII(string[] vetorOrigem, string[] vetorASCII)
+{
+    int posicao = 0;
+    for (int i = 0; i < vetorOrigem.Length; i++)
+    {
+        vetorASCII[posicao] = vetorOrigem[i];
+        vetorASCII[posicao + 1] = ((int)vetorOrigem[i][0]).ToString();
+        posicao += 2;
+
+    }
+}
 
 string[] vetorCarac = new string[10];
 
-Console.Write("Insira um caractere para cada uma das 10 posições! \n");
+Console.WriteLine("Você tem um vetor de 10 posições!\n");
+Console.Write("Insira um caractere para cada posição. \n");
 
-for(int i = 0; i < vetorCarac.Length; i++)
-{
-    Console.Write($"Posição: {i + 1}, caractere a inserir: ");
-    vetorCarac[i] = Console.ReadLine()!;
-}
+PreencherVetor(vetorCarac);
 
-string[] novoVetor = new string[(vetorCarac.Length)*2];
-int posicao = 0;
-for(int i = 0; i < vetorCarac.Length; i++)
-{
-    novoVetor[posicao] = vetorCarac[i];
-    novoVetor[posicao + 1] = ((int)vetorCarac[i][0]).ToString();
-    posicao += 2;
+string[] novoVetor = new string[(vetorCarac.Length) * 2];
 
-}
+CriarVetorASCII(vetorCarac, novoVetor);
 
 Console.WriteLine("PRIMEIRO VETOR:");
-imprimirVetor(vetorCarac);
+ImprimirVetor(vetorCarac);
 
 Console.WriteLine("\nSEGUNDO VETOR:");
-imprimirVetor(novoVetor);
+ImprimirVetor(novoVetor);
 
 Console.WriteLine("\n\n-- PROGRAMA FINALIZADO --");
