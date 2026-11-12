@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="5by5-Vetores/5by5-Vetores.csproj" />
+  <Project Path="Ex1-InputEImpressãoVetor/Ex1-InputEImpressãoVetor.csproj" Id="4dcd88fb-7866-401a-9480-f2e10a50a723" />
+  <Project Path="Ex2-4Vetores/Ex2-4Vetores.csproj" Id="3843f730-8178-49c3-9b6e-a2b1a8e7fc75" />
+  <Project Path="Ex3-ExibirVetorFibonacci/Ex3-ExibirVetorFibonacci.csproj" Id="5055012d-a4bd-4336-b57a-bc08ddeca68e" />
+  <Project Path="Ex4-VetorCaractereASC/Ex4-VetorCaractereASC.csproj" Id="fdfd6a6b-5ae5-43c0-827f-78af9361bf2b" />
+</Solution>
